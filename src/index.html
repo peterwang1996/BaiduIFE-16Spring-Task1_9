@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <input type="text"></input>
+        <input type="search">
         <a href="#">登陆</a>
     </header>
     <div id="container">
@@ -24,12 +24,12 @@
                 <div class="info"><span class="num">313</span><span class="num-tag">粉丝</span></div>
             </div>
             <ul id="menu">
-                <details class="menu-1">
+                <details class="menu-1" open>
                     <summary>个人报表</summary>
                     <details class="menu-2">
                         <summary>文件一</summary>
                     </details>
-                    <details class="menu-2">
+                    <details class="menu-2" open>
                         <summary>文件二</summary>
                         <ul>
                             <li class="menu-3">文档1</li>
@@ -40,17 +40,142 @@
                         <summary>文件三</summary>
                     </details>
                 </details>
-                <details class="menu-1">个人收藏</details>
-                <details class="menu-1">我的分享</details>
-                <details class="menu-1">图库</details>
-                <details class="menu-1">成长记录</details>
-                <details class="menu-1">我的信息</details>
+                <details class="menu-1">
+                    <summary>个人收藏</summary>
+                </details>
+                <details class="menu-1">
+                    <summary>我的分享</summary>
+                </details>
+                <details class="menu-1">
+                    <summary>图库</summary>
+                </details>
+                <details class="menu-1">
+                    <summary>成长记录</summary>
+                </details>
+                <details class="menu-1">
+                    <summary>我的信息</summary>
+                </details>
             </ul>
         </aside>
         <article>
             <nav>
                 <a href="#">C站</a>/<a href="#">个人报表</a>/<a href="#">文件一</a>/<a href="#">文档1</a>
             </nav>
+            <div class="inner-container">
+                <div id="query-div">
+                    <form id="query">
+                        <div>
+                            <span>查询项</span>
+                            <select name="query-option">
+                                <option value="1">第一项</option>
+                                <option value="2">第二项</option>
+                                <option value="3">第三项</option>
+                                <option value="4">第四项</option>
+                                <option value="5">第五项</option>
+                            </select>
+                            <span>买方</span>
+                            <select name="buyer">
+                                <option value="a" selected="selected">小A</option>
+                                <option value="b">小B</option>
+                                <option value="c">小C</option>
+                            </select>
+                            <span>卖方</span>
+                            <select name="seller">
+                                <option value="a">小A</option>
+                                <option value="b">小B</option>
+                                <option value="c" selected="selected">小C</option>
+                            </select>
+                            <a href="#">换</a>
+                            <span>日期</span>
+                            <input type="date" name="date" value="2016-04-01">
+                            <span>总耗时</span>
+                            <select name="time-taken">
+                                <option value="1">1天</option>
+                                <option value="2">2天</option>
+                                <option value="3">3天</option>
+                                <option value="4">4天</option>
+                                <option value="5">5天</option>
+                                <option value="6">6天</option>
+                                <option value="7">7天</option>
+                                <option value="8">8天</option>
+                                <option value="9">9天</option>
+                                <option value="10">10天</option>
+                            </select>
+                            <span>人数</span>
+                            <select name="people">
+                                <option value="1">1人</option>
+                                <option value="2">2人</option>
+                                <option value="3">3人</option>
+                                <option value="4">4人</option>
+                                <option value="5">5人</option>
+                                <option value="6">6人</option>
+                                <option value="7">7人</option>
+                                <option value="8">8人</option>
+                                <option value="9">9人</option>
+                                <option value="10">10人</option>
+                            </select>
+                            <span>成交项</span>
+                            <select name="deal-num">
+                                <option value="1">1项</option>
+                                <option value="2">2项</option>
+                                <option value="3">3项</option>
+                                <option value="4">4项</option>
+                                <option value="5">5项</option>
+                                <option value="6">6项</option>
+                                <option value="7">7项</option>
+                                <option value="8">8项</option>
+                                <option value="9">9项</option>
+                                <option value="10">10项</option>
+                            </select>
+                            <input type="submit" value="搜索">
+                        </div>
+                    </form>
+                </div>
+                <div id="select-order">
+                    <a href="#">
+                        <div id="prev"></div>
+                    </a>
+                    <ul>
+                        <a href="#">
+                            <li class="orders select-order-active">
+                                <span class="time">10:00 am</span>
+                                <span class="price">￥1200</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="orders">
+                                <span class="time">11:00 am</span>
+                                <span class="price">￥1300</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="orders">
+                                <span class="time">12:00 am</span>
+                                <span class="price">￥1200</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="orders">
+                                <span class="time">01:00 pm</span>
+                                <span class="price">￥1400</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="orders">
+                                <span class="time">02:00 pm</span>
+                                <span class="price">￥1500</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="orders">
+                                <span class="time">03:00 pm</span>
+                                <span class="price">￥1800</span></li>
+                        </a>
+                    </ul>
+                    <a href="#">
+                        <div id="next"></div>
+                    </a>
+                    <a href="#">
+                        <div id="history-query">历史查询</div>
+                    </a>
+                </div>
+            </div>
         </article>
     </div>
 </body>
