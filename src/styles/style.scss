@@ -1,5 +1,6 @@
 $main-width: 1280px;
 $aside-width: 260px;
+$default-shadow: 1px 1px 5px -2px #74839d;
 * {
     padding: 0;
     margin: 0;
@@ -71,8 +72,8 @@ aside {
     width: $aside-width;
     float: left;
     background: #2a2f3d;
-    margin-bottom: -6000px;
-    padding-bottom: 6000px;
+    margin-bottom: -6666px;
+    padding-bottom: 6666px;
     color: $regular-color;
     img {
         display: block;
@@ -112,8 +113,8 @@ aside {
         .menu-1 {
             margin-left: 46px;
             > summary {
-                height: 36px;
-                line-height: 36px;
+                height: 48px;
+                line-height: 48px;
             }
         }
         .menu-2 {
@@ -121,8 +122,8 @@ aside {
             > summary {
                 background: url(./images/arrow.png) no-repeat 1em center;
                 text-indent: 28px;
-                height: 18px;
-                line-height: 18px;
+                height: 30px;
+                line-height: 30px;
                 &:before {
                     content: "****";
                     color: transparent;
@@ -139,7 +140,9 @@ aside {
             }
         }
         .menu-3 {
-            margin-left: 30px;
+            margin-left: 48px;
+            height: 30px;
+            line-height: 30px;
             &:before {
                 content: "****";
                 color: transparent;
@@ -152,4 +155,80 @@ aside {
 article {
     float: right;
     width: $main-width - $aside-width;
+    nav {
+        height: 30px;
+        line-height: 30px;
+        background: #fff;
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding-left: 30px;
+        color: #b4b4b4;
+        a {
+            color: #b4b4b4;
+            margin: 0 10px;
+            &.current {
+                color: #6898c2;
+            }
+        }
+    }
+    $inner-width: 890px;
+    .inner-container {
+        width: $inner-width;
+        margin: auto;
+    }
+    .row {
+        width: $inner-width;
+    }
+    #query-div {
+        height: 86px;
+        margin-top: 20px;
+        background: #fff;
+        border: 1px solid #b4b4b4;
+        box-shadow: $default-shadow;
+        // padding: 16px 36px;
+        .query-block {
+            float: left;
+            height: 60px;
+            margin: 16px 0 0 36px;
+            line-height: 30px;
+            font-size: 14px;
+            color: #b4b4b4;
+        }
+        .last {
+            margin-right: 0;
+        }
+        select {
+            height: 25px;
+            appearance: none;
+            background: url(./images/arrow-small.png) no-repeat center right;
+            text-indent: 6px;
+            border-radius: 1px;
+            margin: auto 0 auto 16px;
+            &[name="buyer"],
+            &[name="seller"],
+            &[name="deal-num"] {
+                width: 124px;
+            }
+            &[name="query-option"],
+            &[name="people"],
+            &[name="time-taken"] {
+                width: 70px;
+            }
+            &.active {
+                background: url(./images/arrow-small-active.png) no-repeat center right;
+            }
+        }
+        input[type="date"] {
+            width: 120px;
+            margin: auto 0 auto 16px;
+        }
+        input[type="submit"] {
+        	width: 50px;
+        	height: 25px;
+        	background: #378ac1;
+        	border: 0;
+        	border-radius: 2px;
+        	color: #fff;
+        }
+    }
 }

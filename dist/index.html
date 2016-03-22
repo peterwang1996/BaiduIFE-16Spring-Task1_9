@@ -70,33 +70,38 @@
             </div>
         </aside>
         <article>
-            <nav><a href="#">C站</a>/<a href="#">个人报表</a>/<a href="#">文件一</a>/<a href="#">文档1</a>
+            <nav><a href="#">C站</a>/<a href="#">个人报表</a>/<a href="#">文件一</a>/<a href="#" class="current">文档1</a>
             </nav>
             <div class="inner-container">
                 <div class="row" id="query-div">
                     <form id="query">
-                        <div>
+                        <div class="query-block">
                             <span>查询项</span>
-                            <select name="query-option">
+                            <select name="query-option" class="active">
                                 <option value="1">第一项</option>
                                 <option value="2">第二项</option>
                                 <option value="3">第三项</option>
                                 <option value="4">第四项</option>
                                 <option value="5">第五项</option>
                             </select>
+                        </div>
+                        <div class="query-block">
                             <span>买方</span>
                             <select name="buyer">
                                 <option value="a" selected="selected">小A</option>
                                 <option value="b">小B</option>
                                 <option value="c">小C</option>
                             </select>
+                            <br>
                             <span>卖方</span>
                             <select name="seller">
                                 <option value="a">小A</option>
                                 <option value="b">小B</option>
                                 <option value="c" selected="selected">小C</option>
                             </select>
-                            <a href="#">换</a>
+                            <div class="exchange"></div>
+                        </div>
+                        <div class="query-block">
                             <span>日期</span>
                             <input type="date" name="date" value="2016-04-01">
                             <span>总耗时</span>
@@ -112,6 +117,7 @@
                                 <option value="9">9天</option>
                                 <option value="10">10天</option>
                             </select>
+                            <br>
                             <span>人数</span>
                             <select name="people">
                                 <option value="1">1人</option>
@@ -138,8 +144,11 @@
                                 <option value="9">9项</option>
                                 <option value="10">10项</option>
                             </select>
+                        </div>
+                        <div class="query-block last">
                             <input type="submit" value="搜索">
                         </div>
+                        <div class="clear"></div>
                     </form>
                 </div>
                 <div class="row" id="select-order">

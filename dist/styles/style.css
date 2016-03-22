@@ -52,8 +52,8 @@ aside {
   width: 260px;
   float: left;
   background: #2a2f3d;
-  margin-bottom: -6000px;
-  padding-bottom: 6000px;
+  margin-bottom: -6666px;
+  padding-bottom: 6666px;
   color: #697a8f; }
   aside img {
     display: block;
@@ -88,15 +88,15 @@ aside {
     aside #menu .menu-1 {
       margin-left: 46px; }
       aside #menu .menu-1 > summary {
-        height: 36px;
-        line-height: 36px; }
+        height: 48px;
+        line-height: 48px; }
     aside #menu .menu-2 {
       margin-left: 24px; }
       aside #menu .menu-2 > summary {
         background: url(./images/arrow.png) no-repeat 1em center;
         text-indent: 28px;
-        height: 18px;
-        line-height: 18px; }
+        height: 30px;
+        line-height: 30px; }
         aside #menu .menu-2 > summary:before {
           content: "****";
           color: transparent;
@@ -106,7 +106,9 @@ aside {
         aside #menu .menu-2[open] > summary:before {
           background: url(./images/folder-active.png) no-repeat center; }
     aside #menu .menu-3 {
-      margin-left: 30px; }
+      margin-left: 48px;
+      height: 30px;
+      line-height: 30px; }
       aside #menu .menu-3:before {
         content: "****";
         color: transparent;
@@ -115,3 +117,61 @@ aside {
 article {
   float: right;
   width: 1020px; }
+  article nav {
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-left: 30px;
+    color: #b4b4b4; }
+    article nav a {
+      color: #b4b4b4;
+      margin: 0 10px; }
+      article nav a.current {
+        color: #6898c2; }
+  article .inner-container {
+    width: 890px;
+    margin: auto; }
+  article .row {
+    width: 890px; }
+  article #query-div {
+    height: 86px;
+    margin-top: 20px;
+    background: #fff;
+    border: 1px solid #b4b4b4;
+    box-shadow: 1px 1px 5px -2px #74839d; }
+    article #query-div .query-block {
+      float: left;
+      height: 60px;
+      margin: 16px 0 0 36px;
+      line-height: 30px;
+      font-size: 14px;
+      color: #b4b4b4; }
+    article #query-div .last {
+      margin-right: 0; }
+    article #query-div select {
+      height: 25px;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      background: url(./images/arrow-small.png) no-repeat center right;
+      text-indent: 6px;
+      border-radius: 1px;
+      margin: auto 0 auto 16px; }
+      article #query-div select[name="buyer"], article #query-div select[name="seller"], article #query-div select[name="deal-num"] {
+        width: 124px; }
+      article #query-div select[name="query-option"], article #query-div select[name="people"], article #query-div select[name="time-taken"] {
+        width: 70px; }
+      article #query-div select.active {
+        background: url(./images/arrow-small-active.png) no-repeat center right; }
+    article #query-div input[type="date"] {
+      width: 120px;
+      margin: auto 0 auto 16px; }
+    article #query-div input[type="submit"] {
+      width: 50px;
+      height: 25px;
+      background: #378ac1;
+      border: 0;
+      border-radius: 2px;
+      color: #fff; }
