@@ -20,7 +20,7 @@ ul {
   list-style: none; }
 
 html {
-  background: #eee; }
+  background: #fff; }
 
 .container {
   width: 1280px;
@@ -115,6 +115,7 @@ aside {
         background: url(./images/file.png) no-repeat center; }
 
 article {
+  background: #eee;
   float: right;
   width: 1020px; }
   article nav {
@@ -150,6 +151,11 @@ article {
       color: #b4b4b4; }
     article #query-div .last {
       margin-right: 0; }
+    article #query-div .exchange {
+      margin-left: 0;
+      width: 27px;
+      background: url(./images/exchange.png) no-repeat 0 center;
+      cursor: pointer; }
     article #query-div select {
       height: 25px;
       -webkit-appearance: none;
@@ -157,16 +163,16 @@ article {
               appearance: none;
       background: url(./images/arrow-small.png) no-repeat center right;
       text-indent: 6px;
-      border-radius: 1px;
+      border-radius: 2px;
       margin: auto 0 auto 16px; }
       article #query-div select[name="buyer"], article #query-div select[name="seller"], article #query-div select[name="deal-num"] {
-        width: 124px; }
+        width: 128px; }
       article #query-div select[name="query-option"], article #query-div select[name="people"], article #query-div select[name="time-taken"] {
         width: 70px; }
       article #query-div select.active {
         background: url(./images/arrow-small-active.png) no-repeat center right; }
     article #query-div input[type="date"] {
-      width: 120px;
+      width: 124px;
       margin: auto 0 auto 16px; }
     article #query-div input[type="submit"] {
       width: 50px;
@@ -174,4 +180,52 @@ article {
       background: #378ac1;
       border: 0;
       border-radius: 2px;
-      color: #fff; }
+      color: #fff;
+      cursor: pointer; }
+  article #select-order {
+    margin-top: 10px; }
+    article #select-order #prev,
+    article #select-order #next,
+    article #select-order .orders,
+    article #select-order #history-query {
+      height: 64px;
+      float: left;
+      border: 1px solid #b4b4b4;
+      background: #fff;
+      box-shadow: 1px 1px 5px -2px #74839d;
+      margin-right: 5px;
+      text-align: center; }
+    article #select-order #prev,
+    article #select-order #next {
+      width: 30px; }
+    article #select-order #prev {
+      background: url(./images/left-arrow.png) no-repeat center #fff; }
+    article #select-order #next {
+      background: url(./images/right-arrow.png) no-repeat center #fff; }
+    article #select-order #history-query {
+      width: 110px;
+      margin: 0 0 0 2px;
+      line-height: 64px;
+      font-size: 12px;
+      color: #b4b4b4;
+      text-indent: 36px;
+      background: url(./images/calander.png) no-repeat 12px center #fff; }
+    article #select-order .orders {
+      width: 110px; }
+      article #select-order .orders .time {
+        color: #b4b4b4;
+        margin-top: 15px;
+        font-size: 12px; }
+      article #select-order .orders .price {
+        color: #ed7016;
+        font-weight: bold;
+        font-size: 16px; }
+        article #select-order .orders .price:first-letter {
+          color: #b4b4b4;
+          font-size: 12px;
+          font-weight: normal; }
+    article #select-order .active {
+      border-top: 4px solid #4288c9;
+      height: 60px; }
+      article #select-order .active .time {
+        margin-top: 12px; }
