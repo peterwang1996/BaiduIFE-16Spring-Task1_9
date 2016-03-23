@@ -30,6 +30,21 @@ html {
   margin: auto;
   overflow: hidden; }
 
+.bottom-block {
+  height: 358px;
+  margin: 10px 10px 0 0;
+  background: #fff;
+  float: left;
+  border: 1px solid #b4b4b4;
+  border-radius: 2px; }
+  .bottom-block h2 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: normal;
+    background: #f4f5f6;
+    text-indent: 20px; }
+
 header {
   height: 56px;
   background: #1e89bf; }
@@ -299,3 +314,15 @@ article {
         border-left: 4px solid #e2cd47; }
         article #static ul li.yellow .color-block {
           background: #e2cd47; }
+  article #my-table {
+    width: 528px; }
+  article #description {
+    margin-right: 0;
+    width: 348px; }
+  article #calander {
+    width: 348px;
+    margin-bottom: 154px; }
+  article #rank {
+    width: 528px;
+    margin-bottom: 154px;
+    margin-right: 0; }
