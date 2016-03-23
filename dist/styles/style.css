@@ -11,6 +11,9 @@ summary {
   summary::-webkit-details-marker {
     display: none; }
 
+details[open] > summary {
+  color: #fff; }
+
 a {
   text-decoration: none; }
   a :hover {
@@ -75,11 +78,12 @@ aside {
     width: 129px;
     height: 30px;
     margin-bottom: 26px; }
-    aside .info div {
+    aside .info span {
       text-align: center;
       font-size: 14px;
       height: 14px;
-      line-height: 14px; }
+      line-height: 14px;
+      display: block; }
   aside #first-info {
     border-right: 2px solid #313646; }
   aside #menu {
@@ -89,7 +93,20 @@ aside {
       margin-left: 46px; }
       aside #menu .menu-1 > summary {
         height: 48px;
-        line-height: 48px; }
+        line-height: 48px;
+        text-indent: 18px; }
+        aside #menu .menu-1 > summary.chart {
+          background: url(./images/chart.png) no-repeat 0 center; }
+        aside #menu .menu-1 > summary.star {
+          background: url(./images/star.png) no-repeat 0 center; }
+        aside #menu .menu-1 > summary.share {
+          background: url(./images/share.png) no-repeat 0 center; }
+        aside #menu .menu-1 > summary.gallary {
+          background: url(./images/star.png) no-repeat 0 center; }
+        aside #menu .menu-1 > summary.record {
+          background: url(./images/star.png) no-repeat 0 center; }
+        aside #menu .menu-1 > summary.profile {
+          background: url(./images/profile.png) no-repeat 0 center; }
     aside #menu .menu-2 {
       margin-left: 24px; }
       aside #menu .menu-2 > summary {
@@ -113,6 +130,10 @@ aside {
         content: "****";
         color: transparent;
         background: url(./images/file.png) no-repeat center; }
+      aside #menu .menu-3.active {
+        color: #fff; }
+        aside #menu .menu-3.active:before {
+          background: url(./images/file-active.png) no-repeat center; }
 
 article {
   background: #eee;

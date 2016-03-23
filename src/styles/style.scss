@@ -18,6 +18,10 @@ summary {
     }
 }
 
+details[open] > summary {
+    color: #fff;
+}
+
 a {
     text-decoration: none;
     :hover {
@@ -97,11 +101,12 @@ aside {
         width: $aside-width / 2 - 1;
         height: 30px;
         margin-bottom: 26px;
-        div {
+        span {
             text-align: center;
             font-size: 14px;
             height: 14px;
             line-height: 14px;
+            display: block;
         }
     }
     #first-info {
@@ -115,6 +120,25 @@ aside {
             > summary {
                 height: 48px;
                 line-height: 48px;
+                text-indent: 18px;
+                &.chart {
+                    background: url(./images/chart.png) no-repeat 0 center;
+                }
+                &.star {
+                    background: url(./images/star.png) no-repeat 0 center;
+                }
+                &.share {
+                    background: url(./images/share.png) no-repeat 0 center;
+                }
+                &.gallary {
+                    background: url(./images/star.png) no-repeat 0 center;
+                }
+                &.record {
+                    background: url(./images/star.png) no-repeat 0 center;
+                }
+                &.profile {
+                    background: url(./images/profile.png) no-repeat 0 center;
+                }
             }
         }
         .menu-2 {
@@ -147,6 +171,12 @@ aside {
                 content: "****";
                 color: transparent;
                 background: url(./images/file.png) no-repeat center;
+            }
+            &.active {
+                color: #fff;
+                &:before {
+                    background: url(./images/file-active.png) no-repeat center;
+                }
             }
         }
     }
