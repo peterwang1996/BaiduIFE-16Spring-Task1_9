@@ -3,13 +3,15 @@
   margin: 0;
   font-family: "Microsoft Yahei", "Segoe UI", Arial, Helvetica, "Microsoft Jhenghei", "Hiragino Sans GB", "WenQuanYi Zen Hei", SimHei, STHeiti, "WenQuanYi Micro Hei", sans-serif; }
 
+table {
+  border-collapse: collapse; }
+  table tr td:hover {
+    background: #ededf0; }
+
 summary {
   cursor: pointer; }
   summary::-webkit-details-marker {
     display: none; }
-
-details[open] > summary {
-  color: #fff; }
 
 a {
   text-decoration: none; }
@@ -36,14 +38,17 @@ html {
   background: #fff;
   float: left;
   border: 1px solid #b4b4b4;
-  border-radius: 2px; }
+  border-radius: 6px; }
   .bottom-block h2 {
+    color: #555;
     height: 40px;
     line-height: 40px;
     font-size: 16px;
     font-weight: normal;
     background: #f4f5f6;
-    text-indent: 20px; }
+    text-indent: 20px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 6px 6px 0 0; }
 
 header {
   height: 56px;
@@ -73,12 +78,18 @@ aside {
   margin-bottom: -6666px;
   padding-bottom: 6666px;
   color: #697a8f; }
-  aside img {
+  aside #icon-border {
     display: block;
     float: left;
     margin: 18px 0 32px 46px;
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
+    border: 2px solid #697a8f;
+    border-radius: 50%; }
+  aside #icon {
+    width: 46px;
+    height: 46px;
+    margin: 5px;
     border-radius: 50%; }
   aside h1 {
     display: block;
@@ -102,10 +113,13 @@ aside {
   aside #first-info {
     border-right: 2px solid #313646; }
   aside #menu {
-    background: #383e4e;
     font-size: 12px; }
+    aside #menu details[open], aside #menu details:hover {
+      background: #383e4e; }
+      aside #menu details[open] > summary, aside #menu details:hover > summary {
+        color: #fff; }
     aside #menu .menu-1 {
-      margin-left: 46px; }
+      padding-left: 46px; }
       aside #menu .menu-1 > summary {
         height: 48px;
         line-height: 48px;
@@ -191,6 +205,8 @@ article {
       width: 27px;
       background: url(./images/exchange.png) no-repeat 0 center;
       cursor: pointer; }
+      article #query-div .exchange:hover {
+        background: url(./images/exchange-active.png) no-repeat 0 center; }
     article #query-div select {
       height: 25px;
       -webkit-appearance: none;
@@ -216,7 +232,8 @@ article {
       border: 0;
       border-radius: 2px;
       color: #fff;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-top: 18px; }
   article #select-order {
     margin-top: 10px; }
     article #select-order #prev,
@@ -243,7 +260,6 @@ article {
       margin: 0 0 0 2px;
       line-height: 64px;
       font-size: 12px;
-      color: #b4b4b4;
       text-indent: 36px;
       background: url(./images/calander.png) no-repeat 12px center #fff; }
     article #select-order .orders {
@@ -262,13 +278,14 @@ article {
           font-weight: normal; }
       article #select-order .orders.active, article #select-order .orders:hover {
         border-top: 4px solid #4288c9;
-        height: 60px; }
+        height: 61px; }
         article #select-order .orders.active .time, article #select-order .orders:hover .time {
           margin-top: 12px; }
   article #static {
     margin-top: 22px; }
     article #static h2 {
-      font-size: 16px; }
+      font-size: 14px;
+      color: #555; }
     article #static ul li {
       margin-top: 6px;
       float: left;
@@ -316,13 +333,214 @@ article {
           background: #e2cd47; }
   article #my-table {
     width: 528px; }
+    article #my-table ul {
+      margin-left: 18px; }
+      article #my-table ul li {
+        font-size: 14px;
+        float: left;
+        margin-top: 12px;
+        height: 26px;
+        line-height: 24px;
+        width: 83px;
+        margin-right: 4px;
+        background: #ededf0;
+        border: 1px solid #ededf0;
+        border-bottom: 1px solid #b4b4b4;
+        border-radius: 6px 6px 0 0;
+        text-align: center;
+        color: #535353;
+        cursor: pointer; }
+        article #my-table ul li.active, article #my-table ul li:hover {
+          background: #fff;
+          border: 1px solid #b4b4b4;
+          border-bottom: 1px solid #fff; }
+    article #my-table #table-border {
+      width: 490px;
+      height: 250px;
+      margin: 0 auto;
+      border: 1px solid #b4b4b4;
+      border-radius: 0 6px 6px 6px;
+      margin-top: -1px; }
+    article #my-table table {
+      margin: 28px auto 0 auto; }
+      article #my-table table tr td {
+        width: 100px;
+        height: 30px;
+        border: 1px solid #b4b4b4;
+        margin: 0;
+        font-size: 12px;
+        font-family: simsun;
+        color: #535353;
+        text-indent: 16px; }
+        article #my-table table tr td:hover {
+          background: #ededf0; }
   article #description {
     margin-right: 0;
     width: 348px; }
+    article #description table {
+      width: 280px;
+      margin: 20px auto 20px auto;
+      border: 0; }
+      article #description table tr td {
+        vertical-align: top;
+        border: 1px solid #b4b4b4; }
+        article #description table tr td.title, article #description table tr td.price, article #description table tr td.leader {
+          height: 44px; }
+        article #description table tr td.price {
+          width: 96px;
+          border-left: 0; }
+        article #description table tr td.leader {
+          border-right: 0; }
+        article #description table tr td.detail {
+          height: 146px;
+          border-left: 0;
+          border-right: 0; }
+        article #description table tr td.title {
+          border-top: 0;
+          border-left: 0;
+          border-right: 0; }
+        article #description table tr td span {
+          margin-left: 4px;
+          display: block; }
+          article #description table tr td span.item-head {
+            font-size: 12px;
+            margin-top: 4px;
+            color: #c2c2c2; }
+          article #description table tr td span.item-content {
+            font-size: 14px;
+            color: #545454; }
+    article #description form {
+      display: block;
+      width: 280px;
+      margin: auto; }
+      article #description form span {
+        display: inline-block;
+        margin-left: 4px;
+        font-size: 14px;
+        color: #c2c2c2; }
+      article #description form input[type="submit"] {
+        float: right;
+        width: 50px;
+        height: 25px;
+        background: #378ac1;
+        border: 0;
+        border-radius: 2px;
+        color: #fff;
+        cursor: pointer; }
   article #calander {
     width: 348px;
-    margin-bottom: 154px; }
+    margin-bottom: 154px;
+    display: block; }
+    article #calander .select-container {
+      width: 320px;
+      height: 24px;
+      line-height: 24px;
+      display: block;
+      margin: 10px auto 0 auto; }
+      article #calander .select-container select {
+        display: inline-block;
+        font-size: 12px;
+        height: 24px; }
+        article #calander .select-container select#cal-year {
+          width: 65px; }
+        article #calander .select-container select#cal-month {
+          width: 85px; }
+        article #calander .select-container select#cal-tag {
+          width: 75px; }
+      article #calander .select-container button {
+        height: 24px;
+        width: 65px;
+        background: #fff;
+        box-shadow: none;
+        border: 1px solid #b4b4b4;
+        position: relative;
+        top: 1px;
+        border-radius: 2px;
+        cursor: pointer; }
+    article #calander table {
+      margin: 10px auto 0 auto; }
+      article #calander table tr th {
+        font-size: 14px;
+        height: 30px;
+        border-top: 2px solid #b2cfed;
+        border-bottom: 1px solid #b4b4b4; }
+      article #calander table tr td {
+        width: 42px;
+        font-size: 12px;
+        margin: 0 1px 1px 0;
+        font-weight: bold;
+        height: 40px; }
+        article #calander table tr td span {
+          display: block;
+          text-align: center; }
+        article #calander table tr td.hoilday .yang,
+        article #calander table tr td.festivel .yin {
+          color: #cc3025; }
+        article #calander table tr td.marked {
+          height: 40px;
+          width: 40px;
+          border: 1px solid #f8d165; }
   article #rank {
     width: 528px;
     margin-bottom: 154px;
     margin-right: 0; }
+    article #rank table {
+      margin: 10px auto 0 auto;
+      font-size: 12px; }
+      article #rank table tr {
+        cursor: pointer; }
+        article #rank table tr:hover {
+          background: #ededf0; }
+        article #rank table tr th {
+          border: 1px solid #b4b4b4;
+          height: 27px; }
+          article #rank table tr th.num {
+            width: 68px; }
+          article #rank table tr th.brand {
+            width: 90px; }
+          article #rank table tr th.index {
+            width: 290px; }
+        article #rank table tr td {
+          height: 24px;
+          text-align: center;
+          border: 1px solid #b4b4b4; }
+          article #rank table tr td .bar-bg {
+            display: inline-block;
+            width: 165px;
+            height: 4px;
+            background: #ddd;
+            position: relative;
+            top: -3px;
+            margin-left: 20px; }
+            article #rank table tr td .bar-bg .bar {
+              height: 4px;
+              width: 50px;
+              background: #7fcaef; }
+              article #rank table tr td .bar-bg .bar.first {
+                background: #ed6e52; }
+              article #rank table tr td .bar-bg .bar.second {
+                background: #ef8150; }
+              article #rank table tr td .bar-bg .bar.third {
+                background: #f19e4f; }
+        article #rank table tr.last td {
+          border-bottom: 0; }
+        article #rank table tr.volkswagen td .bar-bg .bar {
+          width: 134.508px; }
+        article #rank table tr.toyota td .bar-bg .bar {
+          width: 80.59517px; }
+        article #rank table tr.audi td .bar-bg .bar {
+          width: 63.63244px; }
+        article #rank table tr.honda td .bar-bg .bar {
+          width: 62.9353px; }
+        article #rank table tr.ford td .bar-bg .bar {
+          width: 61.39318px; }
+        article #rank table tr.bmw td .bar-bg .bar {
+          width: 58.97121px; }
+        article #rank table tr.hyundai td .bar-bg .bar {
+          width: 55.31616px; }
+        article #rank table tr.kia td .bar-bg .bar {
+          width: 52.94212px; }
+        article #rank table tr.benz td .bar-bg .bar {
+          width: 52.7253px; }
+        article #rank table tr.buick td .bar-bg .bar {
+          width: 50.99607px; }

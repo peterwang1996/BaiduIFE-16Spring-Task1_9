@@ -22,7 +22,9 @@
     <div class="container">
         <aside>
             <div id="user">
-                <img id="icon" src="./styles/images/head.jpg" alt="Peter Wang">
+                <div id="icon-border">
+                    <img id="icon" src="./styles/images/head.jpg" alt="Peter Wang">
+                </div>
                 <h1>Peter Wang</h1>
                 <div class="clear"></div>
                 <div class="info" id="first-info">
@@ -216,75 +218,85 @@
                 <div class="row" id="row-bottom-1">
                     <div class="bottom-block" id="my-table">
                         <h2>第一个项目</h2>
-                        <h3>项目1</h3>
-                        <table>
-                            <tr>
-                                <td>购买材料一</td>
-                                <td>购买材料一</td>
-                                <td>购买材料一</td>
-                                <td>购买材料一</td>
-                            </tr>
-                            <tr>
-                                <td>购买材料二</td>
-                                <td>购买材料二</td>
-                                <td>购买材料二</td>
-                                <td>购买材料二</td>
-                            </tr>
-                            <tr>
-                                <td>购买材料四</td>
-                                <td>购买材料四</td>
-                                <td>购买材料四</td>
-                                <td>购买材料四</td>
-                            </tr>
-                            <tr>
-                                <td>购买材料六</td>
-                                <td>购买材料六</td>
-                                <td>购买材料六</td>
-                                <td>购买材料六</td>
-                            </tr>
-                            <tr>
-                                <td>购买材料十三</td>
-                                <td>购买材料十三</td>
-                                <td>购买材料十三</td>
-                                <td>购买材料十三</td>
-                            </tr>
-                            <tr>
-                                <td>购买材料二十</td>
-                                <td>购买材料二十</td>
-                                <td>购买材料二十</td>
-                                <td>购买材料二十</td>
-                            </tr>
-                        </table>
+                        <ul>
+                            <li class="active">项目1</li>
+                            <li>项目1</li>
+                            <li>项目1</li>
+                            <li>项目1</li>
+                            <li>项目1</li>
+                            <div class="clear"></div>
+                        </ul>
+                        <div id="table-border">
+                            <table>
+                                <tr>
+                                    <td>购买材料一</td>
+                                    <td>购买材料一</td>
+                                    <td>购买材料一</td>
+                                    <td>购买材料一</td>
+                                </tr>
+                                <tr>
+                                    <td>购买材料二</td>
+                                    <td>购买材料二</td>
+                                    <td>购买材料二</td>
+                                    <td>购买材料二</td>
+                                </tr>
+                                <tr>
+                                    <td>购买材料四</td>
+                                    <td>购买材料四</td>
+                                    <td>购买材料四</td>
+                                    <td>购买材料四</td>
+                                </tr>
+                                <tr>
+                                    <td>购买材料六</td>
+                                    <td>购买材料六</td>
+                                    <td>购买材料六</td>
+                                    <td>购买材料六</td>
+                                </tr>
+                                <tr>
+                                    <td>购买材料十三</td>
+                                    <td>购买材料十三</td>
+                                    <td>购买材料十三</td>
+                                    <td>购买材料十三</td>
+                                </tr>
+                                <tr>
+                                    <td>购买材料二十</td>
+                                    <td>购买材料二十</td>
+                                    <td>购买材料二十</td>
+                                    <td>购买材料二十</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                     <div class="bottom-block" id="description">
                         <h2>第一组项目</h2>
                         <table>
                             <tr>
-                                <td colspan="2">
+                                <td colspan="2" class="title">
                                     <span class="item-head">标题</span>
                                     <span class="item-content">项目报表三</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <span class="item-head">标题</span>
-                                    <span class="item-content">项目报表三</span>
+                                <td class="price">
+                                    <span class="item-head">价格</span>
+                                    <span class="item-content">￥158</span>
                                 </td>
-                                <td>
-                                    <span class="item-head">标题</span>
-                                    <span class="item-content">项目报表三</span>
+                                <td class="leader">
+                                    <span class="item-head">负责人</span>
+                                    <span class="item-content">小A</span>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2">
-                                    <span class="item-head">标题</span>
-                                    <span class="item-content">项目报表三</span>
+                                <td colspan="2" class="detail">
+                                    <span class="item-head">详细描述</span>
+                                    <span class="item-content">该项目目前的负责人是……</span>
                                 </td>
                             </tr>
                         </table>
                         <form>
-                            <input type="checkbox"><span>遵守保密协议</span>
+                            <input type="checkbox" name="secret"><span>遵守保密协议</span>
                             <input type="submit" value="搜索">
+                            <div class="clear"></div>
                         </form>
                     </div>
                     <div class="clear"></div>
@@ -292,7 +304,7 @@
                 <div class="row" id="row-bottom-2">
                     <div class="bottom-block" id="calander">
                         <h2>日历</h2>
-                        <form>
+                        <div class="select-container">
                             <select name="year" id="cal-year">
                                 <option value="2011">2011年</option>
                                 <option value="2012">2012年</option>
@@ -320,7 +332,7 @@
                                 <option value="0">不标注日期</option>
                             </select>
                             <button id="cal-today">返回今天</button>
-                        </form>
+                        </div>
                         <table>
                             <tr>
                                 <th>一</th>
@@ -336,18 +348,18 @@
                                 <td><span class="yang"></span><span class="yin"></span></td>
                                 <td><span class="yang"></span><span class="yin"></span></td>
                                 <td><span class="yang"></span><span class="yin"></span></td>
-                                <td><span class="yang">1</span><span class="yin festivel">愚人节</span></td>
-                                <td><span class="yang hoilday">2</span><span class="yin">廿五</span></td>
-                                <td><span class="yang hoilday">3</span><span class="yin">廿六</span></td>
+                                <td class="festivel"><span class="yang">1</span><span class="yin">愚人节</span></td>
+                                <td class="hoilday"><span class="yang">2</span><span class="yin">廿五</span></td>
+                                <td class="hoilday"><span class="yang">3</span><span class="yin">廿六</span></td>
                             </tr>
                             <tr>
                                 <td><span class="yang">4</span><span class="yin">廿七</span></td>
-                                <td><span class="yang">5</span><span class="yin festival">清明</span></td>
+                                <td class="festivel"><span class="yang">5</span><span class="yin">清明</span></td>
                                 <td><span class="yang">6</span><span class="yin">廿九</span></td>
                                 <td><span class="yang">7</span><span class="yin">三月</span></td>
                                 <td><span class="yang">8</span><span class="yin">初二</span></td>
-                                <td><span class="yang hoilday">9</span><span class="yin">初三</span></td>
-                                <td><span class="yang hoilday">10</span><span class="yin">初四</span></td>
+                                <td class="marked hoilday"><span class="yang">9</span><span class="yin">初三</span></td>
+                                <td class="hoilday"><span class="yang">10</span><span class="yin">初四</span></td>
                             </tr>
                             <tr>
                                 <td><span class="yang">11</span><span class="yin">初五</span></td>
@@ -355,17 +367,17 @@
                                 <td><span class="yang">13</span><span class="yin">初七</span></td>
                                 <td><span class="yang">14</span><span class="yin">初八</span></td>
                                 <td><span class="yang">15</span><span class="yin">初九</span></td>
-                                <td><span class="yang hoilday">16</span><span class="yin">初十</span></td>
-                                <td><span class="yang hoilday">17</span><span class="yin">十一</span></td>
+                                <td class="hoilday"><span class="yang">16</span><span class="yin">初十</span></td>
+                                <td class="hoilday"><span class="yang">17</span><span class="yin">十一</span></td>
                             </tr>
                             <tr>
                                 <td><span class="yang">18</span><span class="yin">十二</span></td>
-                                <td><span class="yang">19</span><span class="yin">十三</span></td>
+                                <td class="marked"><span class="yang">19</span><span class="yin">十三</span></td>
                                 <td><span class="yang">20</span><span class="yin">十四</span></td>
                                 <td><span class="yang">21</span><span class="yin">十五</span></td>
                                 <td><span class="yang">22</span><span class="yin">十六</span></td>
-                                <td><span class="yang hoilday">23</span><span class="yin">十七</span></td>
-                                <td><span class="yang hoilday">24</span><span class="yin">十八</span></td>
+                                <td class="hoilday"><span class="yang">23</span><span class="yin">十七</span></td>
+                                <td class="hoilday"><span class="yang">24</span><span class="yin">十八</span></td>
                             </tr>
                             <tr>
                                 <td><span class="yang">25</span><span class="yin">十九</span></td>
@@ -373,47 +385,47 @@
                                 <td><span class="yang">27</span><span class="yin">廿一</span></td>
                                 <td><span class="yang">28</span><span class="yin">廿二</span></td>
                                 <td><span class="yang">29</span><span class="yin">廿三</span></td>
-                                <td><span class="yang hoilday">30</span><span class="yin">廿四</span></td>
-                                <td><span class="yang hoilday"></span><span class="yin"></span></td>
+                                <td class="hoilday"><span class="yang">30</span><span class="yin">廿四</span></td>
+                                <td class="hoilday"><span class="yang"></span><span class="yin"></span></td>
                             </tr>
                         </table>
                     </div>
                     <div class="bottom-block" id="rank">
-                        <h2>汽车行业平排榜</h2>
+                        <h2>汽车行业排行榜</h2>
                         <table>
                             <tr>
-                                <th>排名</th>
-                                <th>品牌</th>
-                                <th>搜索指数</th>
+                                <th class="num">排名</th>
+                                <th class="brand">品牌</th>
+                                <th class="index">搜索指数</th>
                             </tr>
-                            <tr>
+                            <tr class="volkswagen">
                                 <td>1</td>
                                 <td>大众</td>
                                 <td>48912001
                                     <div class="bar-bg">
-                                        <div class="bar"></div>
+                                        <div class="bar first"></div>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="toyota">
                                 <td>2</td>
                                 <td>丰田</td>
                                 <td>29307333
                                     <div class="bar-bg">
-                                        <div class="bar"></div>
+                                        <div class="bar second"></div>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="audi">
                                 <td>3</td>
                                 <td>奥迪</td>
                                 <td>23139070
                                     <div class="bar-bg">
-                                        <div class="bar"></div>
+                                        <div class="bar third"></div>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="honda">
                                 <td>4</td>
                                 <td>本田</td>
                                 <td>22885564
@@ -422,7 +434,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="ford">
                                 <td>5</td>
                                 <td>福特</td>
                                 <td>22324792
@@ -431,7 +443,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="bmw">
                                 <td>6</td>
                                 <td>宝马</td>
                                 <td>21444077
@@ -440,7 +452,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="hyundai">
                                 <td>7</td>
                                 <td>现代</td>
                                 <td>20114969
@@ -449,7 +461,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="kia">
                                 <td>8</td>
                                 <td>起亚</td>
                                 <td>19251680
@@ -458,7 +470,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="benz">
                                 <td>9</td>
                                 <td>奔驰</td>
                                 <td>19172837
@@ -467,7 +479,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="last buick">
                                 <td>10</td>
                                 <td>别克</td>
                                 <td>18544027

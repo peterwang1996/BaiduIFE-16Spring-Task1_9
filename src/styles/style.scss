@@ -1,10 +1,18 @@
 $main-width: 1280px;
 $aside-width: 260px;
 $default-shadow: 1px 1px 5px -2px #74839d;
+$default-border: 1px solid #b4b4b4;
 * {
     padding: 0;
     margin: 0;
     font-family: "Microsoft Yahei", "Segoe UI", Arial, Helvetica, "Microsoft Jhenghei", "Hiragino Sans GB", "WenQuanYi Zen Hei", SimHei, STHeiti, "WenQuanYi Micro Hei", sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    tr td:hover {
+        background: #ededf0;
+    }
 }
 
 summary {
@@ -12,10 +20,6 @@ summary {
     &::-webkit-details-marker {
         display: none;
     }
-}
-
-details[open] > summary {
-    color: #fff;
 }
 
 a {
@@ -44,20 +48,23 @@ html {
 }
 
 .bottom-block {
-	height: 358px;
-	margin: 10px 10px 0 0;
-	background: #fff;
-	float: left;
-	border: 1px solid #b4b4b4;
-	border-radius: 2px;
-	h2 {
-		height: 40px;
-		line-height: 40px;
-		font-size: 16px;
-		font-weight: normal;
-		background: #f4f5f6;
-		text-indent: 20px;
-	}
+    height: 358px;
+    margin: 10px 10px 0 0;
+    background: #fff;
+    float: left;
+    border: $default-border;
+    border-radius: 6px;
+    h2 {
+        color: #555;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        font-weight: normal;
+        background: #f4f5f6;
+        text-indent: 20px;
+        border-bottom: 1px solid #ccc;
+        border-radius: 6px 6px 0 0;
+    }
 }
 
 header {
@@ -96,12 +103,19 @@ aside {
     margin-bottom: -6666px;
     padding-bottom: 6666px;
     color: $regular-color;
-    img {
+    #icon-border {
         display: block;
         float: left;
         margin: 18px 0 32px 46px;
-        width: 60px;
-        height: 60px;
+        width: 56px;
+        height: 56px;
+        border: 2px solid $regular-color;
+        border-radius: 50%;
+    }
+    #icon {
+        width: 46px;
+        height: 46px;
+        margin: 5px;
         border-radius: 50%;
     }
     h1 {
@@ -130,10 +144,18 @@ aside {
         border-right: 2px solid #313646;
     }
     #menu {
-        background: #383e4e;
         font-size: 12px;
+        details {
+            &[open],
+            &:hover {
+                background: #383e4e;
+                > summary {
+                    color: #fff;
+                }
+            }
+        }
         .menu-1 {
-            margin-left: 46px;
+            padding-left: 46px;
             > summary {
                 height: 48px;
                 line-height: 48px;
@@ -232,7 +254,7 @@ article {
         height: 86px;
         margin-top: 20px;
         background: #fff;
-        border: 1px solid #b4b4b4;
+        border: $default-border;
         box-shadow: $default-shadow;
         // padding: 16px 36px;
         .query-block {
@@ -248,6 +270,9 @@ article {
             width: 27px;
             background: url(./images/exchange.png) no-repeat 0 center;
             cursor: pointer;
+            &:hover {
+                background: url(./images/exchange-active.png) no-repeat 0 center;
+            }
         }
         select {
             height: 25px;
@@ -282,6 +307,7 @@ article {
             border-radius: 2px;
             color: #fff;
             cursor: pointer;
+            margin-top: 18px;
         }
     }
     #select-order {
@@ -293,7 +319,7 @@ article {
             cursor: pointer;
             height: 64px;
             float: left;
-            border: 1px solid #b4b4b4;
+            border: $default-border;
             background: #fff;
             box-shadow: $default-shadow;
             margin-right: 5px;
@@ -314,7 +340,6 @@ article {
             margin: 0 0 0 2px;
             line-height: 64px;
             font-size: 12px;
-            color: #b4b4b4;
             text-indent: 36px;
             background: url(./images/calander.png) no-repeat 12px center #fff;
         }
@@ -338,7 +363,7 @@ article {
             &.active,
             &:hover {
                 border-top: 4px solid #4288c9;
-                height: 60px;
+                height: 61px;
                 .time {
                     margin-top: 12px;
                 }
@@ -348,7 +373,8 @@ article {
     #static {
         margin-top: 22px;
         h2 {
-            font-size: 16px;
+            font-size: 14px;
+            color: #555;
         }
         ul li {
             margin-top: 6px;
@@ -411,19 +437,287 @@ article {
         }
     }
     #my-table {
-    	width: 528px;
+        width: 528px;
+        ul {
+            margin-left: 18px;
+            li {
+                font-size: 14px;
+                float: left;
+                margin-top: 12px;
+                height: 26px;
+                line-height: 24px;
+                width: 83px;
+                margin-right: 4px;
+                background: #ededf0;
+                border: 1px solid #ededf0;
+                border-bottom: $default-border;
+                border-radius: 6px 6px 0 0;
+                text-align: center;
+                color: #535353;
+                cursor: pointer;
+                &.active,
+                &:hover {
+                    background: #fff;
+                    border: $default-border;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+        #table-border {
+            width: 490px;
+            height: 250px;
+            margin: 0 auto;
+            border: $default-border;
+            border-radius: 0 6px 6px 6px;
+            margin-top: -1px;
+        }
+        table {
+            margin: 28px auto 0 auto;
+            tr {
+                td {
+                    width: 100px;
+                    height: 30px;
+                    border: $default-border;
+                    margin: 0;
+                    font-size: 12px;
+                    font-family: simsun;
+                    color: #535353;
+                    text-indent: 16px;
+                    &:hover {
+                        background: #ededf0;
+                    }
+                }
+            }
+        }
     }
     #description {
-    	margin-right: 0;
-    	width: 348px;
+        margin-right: 0;
+        width: 348px;
+        table {
+            width: 280px;
+            margin: 20px auto 20px auto;
+            border: 0;
+            tr {
+                td {
+                    vertical-align: top;
+                    border: $default-border;
+                    &.title,
+                    &.price,
+                    &.leader {
+                        height: 44px;
+                    }
+                    &.price {
+                        width: 96px;
+                        border-left: 0;
+                    }
+                    &.leader {
+                        border-right: 0;
+                    }
+                    &.detail {
+                        height: 146px;
+                        border-left: 0;
+                        border-right: 0;
+                    }
+                    &.title {
+                        border-top: 0;
+                        border-left: 0;
+                        border-right: 0;
+                    }
+                    span {
+                        margin-left: 4px;
+                        display: block;
+                        &.item-head {
+                            font-size: 12px;
+                            margin-top: 4px;
+                            color: #c2c2c2;
+                        }
+                        &.item-content {
+                            font-size: 14px;
+                            color: #545454;
+                        }
+                    }
+                }
+            }
+        }
+        form {
+            display: block;
+            width: 280px;
+            margin: auto;
+            span {
+                display: inline-block;
+                margin-left: 4px;
+                font-size: 14px;
+                color: #c2c2c2;
+            }
+            input[type="submit"] {
+                float: right;
+                width: 50px;
+                height: 25px;
+                background: #378ac1;
+                border: 0;
+                border-radius: 2px;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
     }
     #calander {
-    	width: 348px;
-    	margin-bottom: 154px;
+        width: 348px;
+        margin-bottom: 154px;
+        display: block;
+        .select-container {
+            width: 320px;
+            height: 24px;
+            line-height: 24px;
+            display: block;
+            margin: 10px auto 0 auto;
+            select {
+                display: inline-block;
+                font-size: 12px;
+                height: 24px;
+                &#cal-year {
+                    width: 65px;
+                }
+                &#cal-month {
+                    width: 85px;
+                }
+                &#cal-tag {
+                    width: 75px;
+                }
+            }
+            button {
+                height: 24px;
+                width: 65px;
+                background: #fff;
+                box-shadow: none;
+                border: $default-border;
+                position: relative;
+                top: 1px;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+        }
+        table {
+            margin: 10px auto 0 auto;
+            tr {
+                th {
+                    font-size: 14px;
+                    height: 30px;
+                    border-top: 2px solid #b2cfed;
+                    border-bottom: $default-border;
+                }
+                td {
+                    width: 42px;
+                    font-size: 12px;
+                    margin: 0 1px 1px 0;
+                    font-weight: bold;
+                    height: 40px;
+                    span {
+                        display: block;
+                        text-align: center;
+                    }
+                    &.hoilday .yang,
+                    &.festivel .yin {
+                        color: #cc3025;
+                    }
+                    &.marked {
+                        height: 40px;
+                        width: 40px;
+                        border: 1px solid #f8d165;
+                    }
+                }
+            }
+        }
     }
     #rank {
-    	width: 528px;
-    	margin-bottom: 154px;
-    	margin-right: 0;
+        width: 528px;
+        margin-bottom: 154px;
+        margin-right: 0;
+        table {
+            margin: 10px auto 0 auto;
+            font-size: 12px;
+            tr {
+                $bar-width: 165px;
+                $max-num: 60000000;
+                cursor: pointer;
+                &:hover {
+                    background: #ededf0;
+                }
+                th {
+                    border: $default-border;
+                    height: 27px;
+                    &.num {
+                        width: 68px;
+                    }
+                    &.brand {
+                        width: 90px;
+                    }
+                    &.index {
+                        width: 290px;
+                    }
+                }
+                td {
+                    height: 24px;
+                    text-align: center;
+                    border: $default-border;
+                    .bar-bg {
+                        display: inline-block;
+                        width: 165px;
+                        height: 4px;
+                        background: #ddd;
+                        position: relative;
+                        top: -3px;
+                        margin-left: 20px;
+                        .bar {
+                        	height: 4px;
+                        	width: 50px;
+                        	background: #7fcaef;
+                        	&.first {
+                        		background: #ed6e52;
+                        	}
+                            &.second {
+                                background: #ef8150;
+                            }
+                            &.third {
+                                background: #f19e4f;
+                            }
+                        }
+                    }
+                }
+                &.last td {
+                	border-bottom: 0;
+                }
+                &.volkswagen td .bar-bg .bar {
+                    width: $bar-width * 48912001 / $max-num;
+                }
+                &.toyota td .bar-bg .bar {
+                    width: $bar-width * 29307333 / $max-num;
+                }
+                &.audi td .bar-bg .bar {
+                    width: $bar-width * 23139070 / $max-num;
+                }
+                &.honda td .bar-bg .bar {
+                    width: $bar-width * 22885564 / $max-num;
+                }
+                &.ford td .bar-bg .bar {
+                    width: $bar-width * 22324792 / $max-num;
+                }
+                &.bmw td .bar-bg .bar {
+                    width: $bar-width * 21444077 / $max-num;
+                }
+                &.hyundai td .bar-bg .bar {
+                    width: $bar-width * 20114969 / $max-num;
+                }
+                &.kia td .bar-bg .bar {
+                    width: $bar-width * 19251680 / $max-num;
+                }
+                &.benz td .bar-bg .bar {
+                    width: $bar-width * 19172837 / $max-num;
+                }
+                &.buick td .bar-bg .bar {
+                    width: $bar-width * 18544027 / $max-num;
+                }
+            }
+        }
     }
 }
